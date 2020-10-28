@@ -23,13 +23,15 @@ const AddTub = (props) =>{
  const visibleMode = () =>{
   setEditMode(!editMode);
  }
-
+ const lie = (e) => {
+  e.preventDefault();
+}
     return(
         <>
         <Fragment>
           {editMode ? <div className={style.button}  onClick={visibleMode}>+ Add new tab</div> : <>
             
-            <div className={style.Tab}> 
+            <div className={style.Tab} onSubmit={lie}> 
               <form className= "d-flex "  >
               <input
                 type="text"
@@ -37,6 +39,7 @@ const AddTub = (props) =>{
                 onChange={changeStatusLocal}
                 placeholder=" Start typing here to create task... "
                 className="form-control"
+                onSubmit={lie}
               />
         <div className="btn w-25 p-1 btn-success" onClick={  createNewTab }>New Tab </div>
       </form>

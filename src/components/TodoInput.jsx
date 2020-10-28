@@ -15,22 +15,26 @@ const TodoInput = (props) =>{
   };
 
   const changeModeOffSwitch = () => {
+    
     if(description != '')
     props.addnewToDo(description,props.id);
     setDescription('');
     console.log(description);
+    
   }
   const deleteTab = () => {
     props.deleteTab(props.id);
   }
-
+  const lie = (e) => {
+    e.preventDefault();
+ }
 
     return(<div className = { style.Input}>
         <Fragment>
           
            <div className={style.head}><h4 className="text-left ">{props.name} </h4><h4 onClick={deleteTab}>X</h4></div>
          
-              <form className="d-flex " >
+              <form className="d-flex " onSubmit={lie}  >
               <input
                 type="text"
                 autoFocus={true}

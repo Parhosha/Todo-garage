@@ -33,9 +33,10 @@ const TodoList = (props) => {
 
   const changeModeOffSwitch = () => {
     setEditMode(false);
-    
     props.updToDo(status? status:props.lists, props.id, done, date);
     setStatus(status);
+
+    
   };
 
   const changeModeOnSwitch = () => {
@@ -46,20 +47,24 @@ const TodoList = (props) => {
   };
   const movePriority =  (direction) => {
     props.movePriority(direction ? -1 : 1, props.id, props.user_id);
-    
-    
   };
+  const lie = (e) => {
+    e.preventDefault();
+ }
 
   return (
     <>
       <div className={style.wrap} id={todayb==b? style.red:style.empty}>
+      
         {editMode ? (
          
           <>
             <div className={style.blockChange}>
             {console.log(props.date)}
+            
             <div className={style.change}>
               <p>Put changes here:</p>
+              
               <input
                 type="text"
                 autoFocus={true}
@@ -69,14 +74,17 @@ const TodoList = (props) => {
               />
               </div>
               <div className={style.change}>
-              <p>Date of dead line:</p>
+              <p>Date of deadline:</p>
               <input type="date" onChange ={ changeDateLocal } placeholder={props.date} value={props.date}/>
               </div>
               <div className={style.change}>
               <p>Done:</p>
               <input type="checkbox" onChange ={ changeDoneLocal } checked={done ? 'checked' : ''}/>
+              
               </div>
+             
             </div>
+            
           </>
         ) : (
           <>
@@ -107,6 +115,7 @@ const TodoList = (props) => {
             </div>
           </>
         )}
+       
       </div>
     </>
   );
