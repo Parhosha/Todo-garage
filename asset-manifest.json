@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Todo-garage/static/css/main.c764fd4b.chunk.css",
-    "main.js": "/Todo-garage/static/js/main.f7c3e1ed.chunk.js",
-    "main.js.map": "/Todo-garage/static/js/main.f7c3e1ed.chunk.js.map",
+    "main.js": "/Todo-garage/static/js/main.917d8367.chunk.js",
+    "main.js.map": "/Todo-garage/static/js/main.917d8367.chunk.js.map",
     "runtime-main.js": "/Todo-garage/static/js/runtime-main.9cd35c92.js",
     "runtime-main.js.map": "/Todo-garage/static/js/runtime-main.9cd35c92.js.map",
     "static/js/2.f1331a6e.chunk.js": "/Todo-garage/static/js/2.f1331a6e.chunk.js",
     "static/js/2.f1331a6e.chunk.js.map": "/Todo-garage/static/js/2.f1331a6e.chunk.js.map",
     "index.html": "/Todo-garage/index.html",
-    "precache-manifest.c4eab4bd28ba391dfbafa680f74830b7.js": "/Todo-garage/precache-manifest.c4eab4bd28ba391dfbafa680f74830b7.js",
+    "precache-manifest.6e9db09798a379c5d02d2689fa7524ad.js": "/Todo-garage/precache-manifest.6e9db09798a379c5d02d2689fa7524ad.js",
     "service-worker.js": "/Todo-garage/service-worker.js",
     "static/css/main.c764fd4b.chunk.css.map": "/Todo-garage/static/css/main.c764fd4b.chunk.css.map",
     "static/js/2.f1331a6e.chunk.js.LICENSE.txt": "/Todo-garage/static/js/2.f1331a6e.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.9cd35c92.js",
     "static/js/2.f1331a6e.chunk.js",
     "static/css/main.c764fd4b.chunk.css",
-    "static/js/main.f7c3e1ed.chunk.js"
+    "static/js/main.917d8367.chunk.js"
   ]
 }
