@@ -4,7 +4,7 @@ const API = {
     get() {
         
         return axios
-            .get('http://localhost:3000/todos' )
+            .get('https://ancient-atoll-77175.herokuapp.com/todos' )
             .then((response) => {
                 return response
             })
@@ -13,7 +13,7 @@ const API = {
     getUser(user){
         
         return axios
-        .post('http://localhost:3000/users',
+        .post('https://ancient-atoll-77175.herokuapp.com/users',
         {
             user
         })
@@ -24,28 +24,28 @@ const API = {
     getTodos(id){
         //alert(id)
         return axios
-        .get('http://localhost:3000/todoList/' + id)
+        .get('https://ancient-atoll-77175.herokuapp.com/todoList/' + id)
         .then((response) => {
             return response 
         })
     },
     deleteId(id) {
 
-        return axios.delete('http://localhost:3000/todos/' + id)
+        return axios.delete('https://ancient-atoll-77175.herokuapp.com/todos/' + id)
             .then((response) => {
                 return response
             })
     },
     deleteTableId(id) {
 
-        return axios.delete('http://localhost:3000/todoList/' + id )
+        return axios.delete('https://ancient-atoll-77175.herokuapp.com/todoList/' + id )
             .then((response) => {
                 return response
             })
     },
     addNewTab(number,table_group_id,description){
         
-        return axios.post('http://localhost:3000/todoList', {
+        return axios.post('https://ancient-atoll-77175.herokuapp.com/todoList', {
             number,
             table_group_id,
             description
@@ -56,7 +56,7 @@ const API = {
     },
     postDesc(description,id) {
 
-        return axios.post('http://localhost:3000/todos/', {
+        return axios.post('https://ancient-atoll-77175.herokuapp.com/todos/', {
                 description,id
             })
             .then((response) => {
@@ -65,7 +65,7 @@ const API = {
     },
     updDesc(description, id , done, date) {
         // console.log(description+id)
-        return axios.put('http://localhost:3000/todos/' + id, {
+        return axios.put('https://ancient-atoll-77175.herokuapp.com/todos/' + id, {
                 description,
                 done,
                 date
