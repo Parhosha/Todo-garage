@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a400e5b698189bd6e7c5e8bac533d670",
+    "revision": "95e71f95cd84c09847aad2811406a83b",
     "url": "/Todo-garage/index.html"
   },
   {
-    "revision": "e7814d9fa83f56d275e5",
-    "url": "/Todo-garage/static/css/main.c764fd4b.chunk.css"
+    "revision": "89c1e118460110d4e877",
+    "url": "/Todo-garage/static/css/main.709f586c.chunk.css"
   },
   {
-    "revision": "03d1ee4b6cc46300b6ca",
-    "url": "/Todo-garage/static/js/2.f1331a6e.chunk.js"
+    "revision": "8e14f9ab9dca505c27a6",
+    "url": "/Todo-garage/static/js/2.1ed9944c.chunk.js"
   },
   {
     "revision": "9b318b6fb13190fe82c0677e9264b3c7",
-    "url": "/Todo-garage/static/js/2.f1331a6e.chunk.js.LICENSE.txt"
+    "url": "/Todo-garage/static/js/2.1ed9944c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e7814d9fa83f56d275e5",
-    "url": "/Todo-garage/static/js/main.6bc9c70b.chunk.js"
+    "revision": "89c1e118460110d4e877",
+    "url": "/Todo-garage/static/js/main.dcd618c4.chunk.js"
   },
   {
     "revision": "a84f1643b88a264c5e0d",
@@ -34,5 +34,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2c2499f696ca521be00829f1e0ea6934",
     "url": "/Todo-garage/static/media/3.2c2499f6.png"
+  },
+  {
+    "revision": "5c5fe58ae7d00aa9582fe287421fb427",
+    "url": "/Todo-garage/static/media/cat.5c5fe58a.gif"
   }
 ]);
