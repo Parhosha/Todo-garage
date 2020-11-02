@@ -9,13 +9,15 @@ const ADD_USER = 'ADD_USER';
 const TODO_NAME = 'TODO_NAME';
 const ADD_TAB = 'ADD_TAB';
 const DEL_TAB = 'DEL_TAB';
+const LOAD = 'LOAD';
 
 let initReducer = {
   toDoList: [],
   todoName:null,
   user:null,
   id:null,
-  auth:0
+  auth:0,
+  preloader:false,
 
 };
 
@@ -113,6 +115,14 @@ console.log(state.toDoList)
         
       }
     }
+    case LOAD:{
+
+      console.log(state.preloader)
+      return{
+        ...state,
+        preloader: !state.preloader
+      }
+    }
 
     default:
       return state;
@@ -162,28 +172,33 @@ export const deleteTableId = (id) =>({
   type:DEL_TAB,
   id
 })
+export const preloader = () =>({
+  type:LOAD,
+})
 //FIX MOVE ELLEMENTS
 
 export const getUserAC = (user) => {
   
     return async (dispatch) => {
+      dispatch(preloader())
       const resp = await API.getUser(user);
-      //при гете поле даты берется не верно???
-      //попробовать удалить колонку и поменять в ней тип на тот же текст
+      
       if(resp.data.rowCount){
-      //  console.log(resp.data.rows[0])
-
+      
+        dispatch(preloader())
         dispatch(getUser(resp.data.rows[0]))
         const respTodos = await API.getTodos(resp.data.rows[0].id)
-        // console.log(respTodos.data.rows)
+       
         dispatch(todoName( respTodos.data.rows));
   
         const respTodo = await API.get();
-        //console.log(respTodo.data)
+        
         dispatch(getAction(respTodo.data));
-        //getAC(respTodos.data.rows[0].id)
+        
       }else{
-        alert('Wrong User!')
+        dispatch(preloader())
+        alert('Wrong User!');
+        
       }
      
   }

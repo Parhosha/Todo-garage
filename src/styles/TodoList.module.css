@@ -175,3 +175,9 @@ margin-bottom: 0px;
     text-align: center;
     background-color: green;
 }
+.preloader {
+    width:10%;
+   position: relative;
+   left:45%;
+   top:30vh;
+}

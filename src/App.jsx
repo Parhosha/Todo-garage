@@ -28,7 +28,7 @@ class App extends React.Component {
         author = {this.props.author}
         addNewTab = {this.props.addNewTabAC}
         deleteTab = {this.props.deleteTab}
-      /> : <Login getUserAC = {this.props.getUserAC}/> }
+      /> : <Login getUserAC = {this.props.getUserAC} preload = {this.props.load}/> }
         
        
       </div>
@@ -39,7 +39,8 @@ class App extends React.Component {
 let mapStateToProps = (state) => ({
   list: state.mainPage.toDoList,
   name: state.mainPage.todoName,
-  author: state.mainPage.user
+  author: state.mainPage.user,
+  load: state.mainPage.preloader
 });
 
 export default connect(mapStateToProps, {
