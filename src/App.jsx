@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Main from './components/Main';
 import { connect } from 'react-redux';
-import {  deletePost, postDescAC, updToDoAC, movePriorityAC,getUserAC,addNewTabAC,deleteTab } from './reducers/Main-reducer';
+import { deletePost, postDescAC, updToDoAC, movePriorityAC,getUserAC,addNewTabAC,deleteTab,updNameToDoAC } from './reducers/Main-reducer';
 import Login from './components/Login';
 import style from './styles/TodoList.module.css';
 
@@ -28,6 +28,7 @@ class App extends React.Component {
         author = {this.props.author}
         addNewTab = {this.props.addNewTabAC}
         deleteTab = {this.props.deleteTab}
+        updNameToDoAC = {this.props.updNameToDoAC}
       /> : <Login getUserAC = {this.props.getUserAC} preload = {this.props.load}/> }
         
        
@@ -50,5 +51,6 @@ export default connect(mapStateToProps, {
   updToDoAC,
   movePriorityAC,
   getUserAC,
-  addNewTabAC
+  addNewTabAC,
+  updNameToDoAC
 })(App);

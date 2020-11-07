@@ -60,7 +60,7 @@ const TodoList = (props) => {
          
           <>
             <div className={style.blockChange}>
-            {console.log(props.date)}
+            
             
             <div className={style.change}>
               <p>Put changes here:</p>

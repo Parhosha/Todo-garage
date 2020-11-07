@@ -52,7 +52,7 @@ console.log(props)
         {
           props.name.map((n,index) => (
            < div key={index + n.name} className={style.Tab}>
-            <TodoInput addnewToDo={props.postDescAC} name={n.name} id={n.id} deleteTab={props.deleteTab}/>
+            <TodoInput addnewToDo={props.postDescAC} name={n.name} id={n.id} deleteTab={props.deleteTab} updNameToDoAC={props.updNameToDoAC} />
   
             { props.list.map((p, key) => (
               

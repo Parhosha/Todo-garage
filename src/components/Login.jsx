@@ -4,7 +4,7 @@ import preload from '../img/cat.gif';
 
 const Login = (props) => {
    
-  console.log(props.preload)
+  //console.log(props.preload)
     let [user, setDescription] = useState('');
     let [editMode, setEditMode] = useState(0);
 

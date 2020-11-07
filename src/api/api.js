@@ -75,6 +75,13 @@ const API = {
                 return response
             })
     },
+    updNameToDo(name,id){
+        console.log(name,id)
+        return axios.put('https://ancient-atoll-77175.herokuapp.com/todoList/' + id,{
+            name
+        })
+        //edit updNameTub
+    }
    
 
 }

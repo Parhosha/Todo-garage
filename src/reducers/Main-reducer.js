@@ -10,6 +10,7 @@ const TODO_NAME = 'TODO_NAME';
 const ADD_TAB = 'ADD_TAB';
 const DEL_TAB = 'DEL_TAB';
 const LOAD = 'LOAD';
+const UPD_TODONAME = 'UPD_TODONAME';
 
 let initReducer = {
   toDoList: [],
@@ -33,6 +34,8 @@ const MainReducer = (state = initReducer, action) => {
       }
     }
     case TODO_NAME:{
+      console.log(action.name)
+      
       return{
         ...state,
         todoName: action.name
@@ -87,7 +90,18 @@ const MainReducer = (state = initReducer, action) => {
         toDoList: [...state.toDoList, ... action.obj]
       };
     }
-
+   case UPD_TODONAME:{
+    for (let a in state.todoName) {
+      if (state.todoName[a].id == action.id) {
+        state.todoName[a].name = action.name
+      }
+    }
+    
+     return{
+      ...state,
+      todoName: state.todoName
+     }
+   }
     case UPD_TEXT: {
 
       for (let a in state.toDoList) {
@@ -153,6 +167,10 @@ export const updToDo = (text, id,done,date) => ({
   done,
   date
 })
+export const updToDoName = (name,id) => ({
+  type: UPD_TODONAME,
+  name,id
+})
 export const movePriority = (newTodo) => ({
   type: PRIORITY,
   newTodo
@@ -188,7 +206,16 @@ export const getUserAC = (user) => {
         dispatch(preloader())
         dispatch(getUser(resp.data.rows[0]))
         const respTodos = await API.getTodos(resp.data.rows[0].id)
-       
+
+        respTodos.data.rows.sort(function (a, b) {
+          if (a.id > b.id) {
+            return 1;
+          }
+          if (a.id < b.id) {
+            return -1;
+          }
+          return 0;
+        })
         dispatch(todoName( respTodos.data.rows));
   
         const respTodo = await API.get();
@@ -246,6 +273,17 @@ export const updToDoAC = (description, id,done,date) => {
   return (dispatch) => {
     API.updDesc(description, id,done,date);
     dispatch(updToDo(description, id,done,date))
+  }
+
+}
+
+export const updNameToDoAC = (name, id) => {
+
+  console.log(name,id)
+  return (dispatch) => {
+    //обновить имя тодо с айд на сервере
+    API.updNameToDo(name, id);
+    dispatch(updToDoName(name, id))
   }
 
 }
