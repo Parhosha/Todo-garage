@@ -148,6 +148,10 @@ margin-bottom: 0px;
 .head > h4:nth-of-type(1){
    width: 80%;
 }
+.head > h4:nth-of-type(2){
+    float:right;
+    margin-right: 10px;
+ }
 
 .Tab{
     
@@ -181,9 +185,13 @@ margin-bottom: 0px;
    left:45%;
    top:30vh;
 }
-.head h4:nth-of-type(2){
-    width: 25px;
-    height: 25px;
+.head h4:nth-of-type(3){
+    width: 35px;
+    height: 35px;
+    margin-top: 5px;
+    
+    line-height: 21px;
+    float:right;
     background-size: cover;
     display: inline-block;
     background-image: url(../img/2.png);

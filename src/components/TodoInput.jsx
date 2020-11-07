@@ -51,8 +51,9 @@ const TodoInput = (props) =>{
         !editMode? (
         <>
         <h4 className="text-left ">{name ? name : props.name} </h4>
-        <h4 onClick={edit} alt=""/>
+        
         <h4 onClick={deleteTab}>X</h4>
+        <h4 onClick={edit} alt=""/>
         </>
         ) : (
           <form className="d-flex "   onSubmit={lie}  >
